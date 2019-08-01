@@ -9,11 +9,8 @@ class TextWidget(Label):
         if 'height' in kw:
             del kw['height']
 
-        print(len(kw['text']), kw['width'])
         if len(kw['text']) < kw['width']:
             kw['width'] = len(kw['text'])
-
-        print(kw['width'])
 
         kw['text'] = self.prepare_text(kw['text'], kw['width'])    
         Label.__init__(self, self.frame, **kw)
